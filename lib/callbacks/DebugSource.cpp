@@ -11,6 +11,12 @@
 
 namespace MAT_NS_BEGIN {
 
+    DebugEventSource::DebugEventSource() :
+        seq(0)
+    { }
+
+    DebugEventSource::~DebugEventSource() { }
+
     /// <summary>Add event listener for specific debug event type.</summary>
     void DebugEventSource::AddEventListener(DebugEventType type, DebugEventListener &listener)
     {

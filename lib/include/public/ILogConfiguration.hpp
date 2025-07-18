@@ -404,13 +404,18 @@ namespace MAT_NS_BEGIN
         /// <summary>
         /// Construct an empty configuration
         /// </summary>
-        ILogConfiguration() = default;
+        ILogConfiguration();
 
         /// <summary>
         /// Construct a pre-populated configuration
         /// </summary>
         /// <param name="initList">Initializer list of key/value config settings</param>
         ILogConfiguration(const std::initializer_list<VariantMap::value_type>& initList);
+
+        /// <summary>
+        /// Configuration destructor
+        /// </summary>
+        ~ILogConfiguration();
 
         /// <summary>
         /// Add a module to the log configuration

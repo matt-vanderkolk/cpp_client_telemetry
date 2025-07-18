@@ -201,7 +201,10 @@ namespace MAT_NS_BEGIN
     {
     public:
         /// <summary>The DebugEventSource constructor.</summary>
-        DebugEventSource() : seq(0) {}
+        DebugEventSource();
+
+        /// <summary>The DebugEventSource destructor.</summary>
+        ~DebugEventSource();
 
         /// <summary>Adds an event listener for the specified debug event type.</summary>
         virtual void AddEventListener(DebugEventType type, DebugEventListener &listener);

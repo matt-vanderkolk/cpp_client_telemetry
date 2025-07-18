@@ -6,6 +6,8 @@
 
 namespace MAT_NS_BEGIN
 {
+    ILogConfiguration::ILogConfiguration() { }
+
     ILogConfiguration::ILogConfiguration(const std::initializer_list<std::pair<const std::string, Variant>>& initList)
         : m_configs(initList) { }
 
@@ -13,6 +15,8 @@ namespace MAT_NS_BEGIN
     {
         m_modules[key] = module;
     }
+
+    ILogConfiguration::~ILogConfiguration() { }
 
     std::shared_ptr<IModule> ILogConfiguration::GetModule(const char* key)
     {
